@@ -60,13 +60,17 @@
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
+    "@storybook/addon-postcss": "^3.0.0-alpha.1",
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/node-logger": "^6.5.10",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/testing-library": "^0.0.13",
+    "autoprefixer": "^10.4.8",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "postcss": "^8.4.16",
     "prop-types": "^15.8.1",
+    "tailwindcss": "^3.1.8",
     "webpack": "^5.74.0"
   }
 }
