@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Meta, Story} from '@storybook/react';
-import Card from '../components/card';
+import Card from '../src/components/card';
 
 const meta: Meta = {
     title: 'Basic Elements/Card',

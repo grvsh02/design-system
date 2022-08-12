@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Meta, Story } from '@storybook/react';
-import Button from '../components/button';
+import Button from '../src/components/button';
 
 const meta: Meta = {
     title: 'Basic Elements/Button',
@@ -34,7 +34,7 @@ Default.args = {
     label: "Press here",
     onClick: () => {},
     disabled : false,
-    className: 'px-2 py-3',
+    className: '',
     children: "Press here",
     size: 'm',
 };

@@ -47,10 +47,10 @@ const ButtonContainer = styled('span')`
 const Button = ({ label, children, className = '', disabled = false ,onClick = () => {}, size = 'l' }: Button) => {
 
     const _className = (() => {
-        let classNames = 'font-semibold';
+        let classNames =  '';
 
         classNames += `${size === 's' ? 'px-2 py-1' : size === 'm' ? 'px-3 py-2' : size === 'l' ? 'px-4 py-3' : ''} `;
-        classNames += `text-${size} `;
+        // classNames += ` text-sm `;
         classNames += className;
         return classNames;
     })();
@@ -63,7 +63,7 @@ const Button = ({ label, children, className = '', disabled = false ,onClick = (
                 onClick(e);
             }}
             disabled={disabled}
-            className={className}
+            className={_className}
         >
             {children}
         </button>
