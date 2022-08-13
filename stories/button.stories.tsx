@@ -31,10 +31,10 @@ const Template: Story = args => (
 export const Default = Template.bind({});
 
 Default.args = {
-    label: "Press here",
+    label: "Shop Now",
     onClick: () => {},
     disabled : false,
     className: '',
-    children: "Press here",
-    size: 'm',
+    children: "Shop Now",
+    size: 'base',
 };
