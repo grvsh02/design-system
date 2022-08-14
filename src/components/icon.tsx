@@ -1,59 +1,80 @@
 import React from 'react';
-import  { TrashBold, SortBold, CloseCircleBold, SearchNormalBold, SmsTrackingBold, HeartBold, FrameBold, CategoryBold, ArrowUpBold, ArrowRightBold, ArrowLeftBold, ArrowSquareLeftBold, ArrowDownBold, TickSquareBold, AddSquareBold, MinusSquareBold, ArrowSquareRightBold, EyeBold, ShoppingCartBold } from '../icons/bold';
-import { EyeOutline, TickSquareOutline, ArrowDownOutline, ArrowLeftOutline, ArrowSquareLeftOutline, ArrowRightOutline, ArrowUpOutline, ShoppingCartOutline, CategoryOutline, FrameOutline, HeartOutline, SmsTrackingOutline, SearchNormalOutline, SortOutline, CloseCircleOutline, TrashOutline, ArrowRight1Outline, AddOutline } from '../icons/outline';
+import  { EyeBold, ArrowDownBold, ShoppingCartBold, ArrowSquareRightBold, MinusSquareBold, AddSquareBold, ArrowSquareLeftBold, TickSquareBold, ArrowLeftBold, ArrowRightBold, ArrowUpBold, CategoryBold, FrameBold, HeartBold, SmsTrackingBold, SearchNormalBold, CloseCircleBold, SortBold, TrashBold } from '../icons/bold';
+import { TrashOutline, SortOutline, EyeOutline, TickSquareOutline, CloseCircleOutline, SearchNormalOutline, SmsTrackingOutline, HeartOutline, FrameOutline, CategoryOutline, ArrowUpOutline, ArrowRightOutline, ArrowLeftOutline, ArrowSquareLeftOutline, ArrowDownOutline, ArrowRight1Outline, AddOutline, ShoppingCartOutline, MinusOutline,  } from '../icons/outline';
 
 
 type IconProps = {
     fill?: string;
     stroke?: string;
     type?: string;
-    icon?: keyof [BoldTypes, OutlineTypes];
-    size?: 'base' | 'sm' | 'xs'
+    size?: 'base' | 'sm' | 'xs';
+    icon? : keyof BoldTypes | keyof OutlineTypes;
 }
 
 type OutlineTypes = {
-    EyeOutline: typeof EyeOutline;
-    TickSquareOutline: typeof TickSquareOutline;
+    ShoppingCartOutline: typeof ShoppingCartOutline;
+    AddOutline: typeof AddOutline;
     ArrowDownOutline: typeof ArrowDownOutline;
     ArrowLeftOutline: typeof ArrowLeftOutline;
-    ArrowSquareLeftOutline: typeof ArrowSquareLeftOutline;
+    ArrowRight1Outline: typeof ArrowRight1Outline;
     ArrowRightOutline: typeof ArrowRightOutline;
+    ArrowSquareLeftOutline: typeof ArrowSquareLeftOutline;
     ArrowUpOutline: typeof ArrowUpOutline;
-    ShoppingCartOutline: typeof ShoppingCartOutline;
     CategoryOutline: typeof CategoryOutline;
+    CloseCircleOutline: typeof CloseCircleOutline;
+    EyeOutline: typeof EyeOutline;
     FrameOutline: typeof FrameOutline;
     HeartOutline: typeof HeartOutline;
-    SmsTrackingOutline: typeof SmsTrackingOutline;
+    MinusOutline: typeof MinusOutline;
     SearchNormalOutline: typeof SearchNormalOutline;
+    SmsTrackingOutline: typeof SmsTrackingOutline;
     SortOutline: typeof SortOutline;
-    CloseCircleOutline: typeof CloseCircleOutline;
+    TickSquareOutline: typeof TickSquareOutline;
     TrashOutline: typeof TrashOutline;
-    ArrowRight1Outline: typeof ArrowRight1Outline;
-    AddOutline: typeof AddOutline;
 }
 
 type BoldTypes = {
-    ShoppingCartBold: typeof ShoppingCartBold;
-    AddSquareBold: typeof AddSquareBold;
-    ArrowDownBold: typeof ArrowDownBold;
-    ArrowLeftBold: typeof ArrowLeftBold;
-    ArrowRightBold: typeof ArrowRightBold;
-    ArrowSquareLeftBold: typeof ArrowSquareLeftBold;
-    ArrowSquareRightBold: typeof ArrowSquareRightBold;
-    ArrowUpBold: typeof ArrowUpBold;
-    CategoryBold: typeof CategoryBold;
-    CloseCircleBold: typeof CloseCircleBold;
-    EyeBold: typeof EyeBold;
-    FrameBold: typeof FrameBold;
-    HeartBold: typeof HeartBold;
-    MinusSquareBold: typeof MinusSquareBold;
-    SearchNormalBold: typeof SearchNormalBold;
-    SmsTrackingBold: typeof SmsTrackingBold;
-    SortBold: typeof SortBold;
-    TickSquareBold: typeof TickSquareBold;
-    TrashBold: typeof TrashBold;
+    Eye: typeof EyeBold;
+    Trash: typeof TrashBold;
+    Sort: typeof SortBold;
+    CloseCircle: typeof CloseCircleBold;
+    SearchNormal: typeof SearchNormalBold;
+    SmsTracking: typeof SmsTrackingBold;
+    Heart: typeof HeartBold;
+    Frame: typeof FrameBold;
+    Category: typeof CategoryBold;
+    ShoppingCart: typeof ShoppingCartBold;
+    ArrowUp: typeof ArrowUpBold;
+    ArrowRight: typeof ArrowRightBold;
+    ArrowSquareRight: typeof ArrowSquareRightBold;
+    ArrowSquareLeft: typeof ArrowSquareLeftBold;
+    ArrowLeft: typeof ArrowLeftBold;
+    ArrowDown: typeof ArrowDownBold;
+    TickSquare: typeof TickSquareBold;
+    MinusSquare: typeof MinusSquareBold;
+    AddSquare: typeof AddSquareBold;
 }
 
+const OutlineTypes = {
+    "Eye" : EyeOutline,
+    "Trash" : TrashOutline,
+    "Sort" : SortOutline,
+    "CloseCircle" : CloseCircleOutline,
+    "SearchNormal" : SearchNormalOutline,
+    "SmsTracking" : SmsTrackingOutline,
+    "Heart" : HeartOutline,
+    "Frame" : FrameOutline,
+    "Category" : CategoryOutline,
+    "ShoppingCart" : ShoppingCartOutline,
+    "ArrowUp" : ArrowUpOutline,
+    "ArrowRight" : ArrowRightOutline,
+    "ArrowSquareLeft" : ArrowSquareLeftOutline,
+    "ArrowLeft" : ArrowLeftOutline,
+    "ArrowDown" : ArrowDownOutline,
+    "TickSquare" : TickSquareOutline,
+    "MinusSquare" : MinusOutline,
+    "AddSquare" : AddOutline
+}
 
 const BoldTypes = {
     "Eye": EyeBold,
@@ -65,21 +86,30 @@ const BoldTypes = {
     "Heart": HeartBold,
     "Frame": FrameBold,
     "Category": CategoryBold,
+    "ShoppingCart": ShoppingCartBold,
     "ArrowUp": ArrowUpBold,
     "ArrowRight": ArrowRightBold,
-    "ArrowLeft": ArrowLeftBold,
+    "ArrowSquareRight": ArrowSquareRightBold,
     "ArrowSquareLeft": ArrowSquareLeftBold,
+    "ArrowLeft": ArrowLeftBold,
     "ArrowDown": ArrowDownBold,
     "TickSquare": TickSquareBold,
-    "AddSquare": AddSquareBold,
     "MinusSquare": MinusSquareBold,
-    "ArrowSquareRight": ArrowSquareRightBold,
-    "ShoppingCart": ShoppingCartBold
+    "AddSquare": AddSquareBold,
 }
 
-const Icon = ({ fill, stroke, type, icon = "ShoppingCart" , size }: IconProps) => {
+const Icon = ({ fill, stroke, type = "Bold", icon = "ShoppingCart" , size }: IconProps) => {
 
-    const IconComponent = BoldTypes[icon];
+    let IconComponent : any;
+    if (type === "Bold") {
+        type BoldTypesKey = keyof typeof BoldTypes;
+        const iconObj = icon as BoldTypesKey;
+        IconComponent = BoldTypes[iconObj];
+    } else {
+        type OutlineTypesKey = keyof typeof OutlineTypes;
+        const iconObj = icon as OutlineTypesKey;
+        IconComponent = OutlineTypes[iconObj];
+    }
     let height ;
     let width ;
     if (size === 'base') {
