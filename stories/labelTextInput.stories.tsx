@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { Meta, Story } from '@storybook/react';
-import IconTextInput from '../src/components/IconTextInput';
+import LabelTextInput from '../src/components/labelTextInput';
 
 const meta: Meta = {
-    title: 'User Inputs/IconTextInput',
-    component: IconTextInput,
+    title: 'User Inputs/LabelTextInput',
+    component: LabelTextInput,
     argTypes: {
         children: {
             control: {
@@ -21,7 +21,7 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story = args => (
-    <IconTextInput {...args} />
+    <LabelTextInput {...args} />
 );
 
 export const Default = Template.bind({});

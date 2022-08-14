@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Icon from "./icon";
 
 type IconTextInput = {
+    label?: string;
     placeholder?: string;
     value?: string;
     onChange?: (value : any) => void;
@@ -12,38 +13,35 @@ type IconTextInput = {
     disabled?: boolean;
     type?: ('email' | 'number' | 'password' | 'text' | 'textarea' | 'url')
     errorText?: string;
-    PreTextIcon?: any;
-    PostTextIcon?: any;
     showCharLimit?: boolean;
+    showLimit?: boolean;
 }
 
 
-const TextFieldContainer = styled.div<{border: string}>`
+const TextFieldContainer = styled.div`
     height: 100%;
     width: 100%;
-    border: 1px solid ${props  => props.border};
-    display: flex;
-
+    color: #030e19;
+    font-size: 14px;
 `;
 
 const InputContainer = styled.input`
     width: 100%;
     padding: 0.5rem 0.5rem 0.5rem 0.7rem;
-    color: #828282;
+    border: 1px solid #828282;
+    border-radius: 5px;
+    color: #030e19;
     font-size: 10px;
     ::placeholder {
         color: #828282;
     }
-    :hover {
-        border: none;
-    }
     :focus {
         outline: none;
-        border: none;
+        border: 1px solid #F4694C;
     }
 `;
 
-const IconTextInput = ({ placeholder="Email Address", PostTextIcon = "ArrowRight1", PreTextIcon = "SmsTracking" , errorText, charLimit, disabled, onChange = () => {}, required, type, className, value }: IconTextInput) => {
+const LabelTextInput = ({ placeholder="Email Address", label = "label" , errorText, charLimit, showLimit, showCharLimit, disabled, onChange = () => {}, required, type, className, value }: IconTextInput) => {
 
     const [inputValue, setInputValue] = React.useState(value !== null ? value : "");
 
@@ -66,36 +64,26 @@ const IconTextInput = ({ placeholder="Email Address", PostTextIcon = "ArrowRight
     const [stroke, setStroke] = React.useState("#828282");
 
     return (
-        <div>
-            <TextFieldContainer
-                className={className}
-                onFocus={() => {
-                    setStroke("#F4694C")
-                }}
-                onBlur={() => {
-                    setStroke("#828282")
-                }}
-                border={stroke}
-            >
-                { PreTextIcon && (
-                    <span className="pt-2 pl-3">
-                        <Icon icon={PreTextIcon} size="sm" stroke={stroke} type="Outline"/>
-                    </span>
-                )}
-                <InputContainer placeholder={placeholder} onChange={handleChange} disabled={disabled} value={inputValue} type={type}/>
-                { PostTextIcon && (
-                    <span className="pt-2 pr-3">
-                        <Icon icon={PostTextIcon} size="sm" stroke={stroke} type="Outline"/>
-                    </span>
-                )}
-            </TextFieldContainer>
+        <TextFieldContainer className={className}>
+            <div className={charLimit ? 'w-2/3 px-0' : 'w-full px-0'}>
+                {label &&
+                    <label className="text-lg opacity-80" aria-hidden={false}>
+                        {label}
+                        {required && <span className="required-marker">*</span>}
+                    </label>}
+                {(charLimit) &&
+                    <div className="w-1/3 opacity-80 px-1 flex items-end justify-end">
+                        {value?.length}/{charLimit}
+                    </div>}
+            </div>
+            <InputContainer placeholder={placeholder} onChange={handleChange} disabled={disabled} value={inputValue} type={type}/>
             {errorText &&
                 <div className="text-red-400 mt-1 text-xs italic">
                     {errorText}
                 </div>}
-        </div>
+        </TextFieldContainer>
 
     )
 }
 
-export default IconTextInput;
+export default LabelTextInput;
