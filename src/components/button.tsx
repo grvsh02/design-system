@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import "../index.css";
-import Eye from "../icons/Bold/Eye";
 
 type Button = {
     children?: React.ReactNode;
