@@ -38,5 +38,44 @@ Default.args = {
     className: '',
     children: "Shop Now",
     size: 'base',
-    iconProps: { icon: "Eye", type: "Bold" },
+    iconProps: { icon: "ShoppingCart", type: "Bold" },
 };
+
+const vars : Story = args => (
+    <div className="flex justify-center items-center">
+        <Button {...args}>
+            {args.children}
+        </Button>
+    </div>
+);
+
+export const variants = vars.bind({});
+
+variants.args = {
+    label: "Shop Now",
+    onClick: () => {},
+    disabled : false,
+    className: '',
+    children: "Shop Now",
+    size: 'base',
+};
+
+const disabled : Story = args => (
+    <div className="flex justify-center items-center">
+        <Button {...args}>
+            {args.children}
+        </Button>
+    </div>
+);
+
+export const Disabled = disabled.bind({});
+
+Disabled.args = {
+    label: "Shop Now",
+    onClick: () => {},
+    disabled : true,
+    className: '',
+    children: "Shop Now",
+    size: 'base',
+};
+

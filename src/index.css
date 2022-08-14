@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Pangram';;
-    src: local('Pangram'), url(../fonts/Pangram-Regular.otf) format('opentype');
+    font-family: 'Pangram';
+    src: local('Pangram'), url(../public/fonts/Pangram-Regular.otf) format('opentype');
 }
 
 body {

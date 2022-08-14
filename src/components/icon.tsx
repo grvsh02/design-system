@@ -77,6 +77,7 @@ const OutlineTypes = {
     "ShoppingCart" : ShoppingCartOutline,
     "ArrowUp" : ArrowUpOutline,
     "ArrowRight" : ArrowRightOutline,
+    "ArrowRight1" : ArrowRight1Outline,
     "ArrowSquareLeft" : ArrowSquareLeftOutline,
     "ArrowLeft" : ArrowLeftOutline,
     "ArrowDown" : ArrowDownOutline,
