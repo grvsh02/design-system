@@ -5,9 +5,13 @@ const meta: Meta = {
     title: 'Basic Elements/Icon',
     component: Icon,
     argTypes: {
-        icon : { control: { type: 'select', options: ["Eye", "Trash", "Sort", "CloseCircle", "SearchNormal", "SmsTracking", "Heart", "Frame", "Category", "ShoppingCart", "ArrowUp", "ArrowRight", "ArrowSquareRight", "ArrowSquareLeft", "ArrowLeft", "ArrowDown", "TickSquare", "MinusSquare", "AddSquare"] } },
+        icon : {
+            control: {
+                    type: 'select',
+                    options: ["Eye", "Trash", "Sort", "CloseCircle", "SearchNormal", "SmsTracking", "Heart", "Frame", "Category", "ShoppingCart", "ArrowUp", "ArrowRight", "ArrowSquareRight", "ArrowSquareLeft", "ArrowLeft", "ArrowDown", "TickSquare", "MinusSquare", "AddSquare"]
+            }},
         size: { control: { type: 'select', options: ["base", "sm", "xs"] } },
-        type: { control: { type: 'select', options: ["Bold", "Outline"] } },
+        type: { control: { type: 'select', options: ["Bold", "Outline", "Social"] } },
         children: {
             control: {
                 type: 'text',

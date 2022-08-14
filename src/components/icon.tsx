@@ -1,14 +1,22 @@
 import React from 'react';
 import  { EyeBold, ArrowDownBold, ShoppingCartBold, ArrowSquareRightBold, MinusSquareBold, AddSquareBold, ArrowSquareLeftBold, TickSquareBold, ArrowLeftBold, ArrowRightBold, ArrowUpBold, CategoryBold, FrameBold, HeartBold, SmsTrackingBold, SearchNormalBold, CloseCircleBold, SortBold, TrashBold } from '../icons/bold';
 import { TrashOutline, SortOutline, EyeOutline, TickSquareOutline, CloseCircleOutline, SearchNormalOutline, SmsTrackingOutline, HeartOutline, FrameOutline, CategoryOutline, ArrowUpOutline, ArrowRightOutline, ArrowLeftOutline, ArrowSquareLeftOutline, ArrowDownOutline, ArrowRight1Outline, AddOutline, ShoppingCartOutline, MinusOutline,  } from '../icons/outline';
-
+import { Google, Facebook, Instagram, Pintrest, Twitter } from '../icons/social';
 
 type IconProps = {
     fill?: string;
     stroke?: string;
     type?: 'Bold' | 'Outline' | 'Social';
     size?: 'base' | 'sm' | 'xs';
-    icon? : keyof BoldTypes | keyof OutlineTypes;
+    icon? : keyof BoldTypes | keyof OutlineTypes | keyof SocialTypes;
+}
+
+export type SocialTypes = {
+    Google: typeof Google;
+    Facebook: typeof Facebook;
+    Instagram: typeof Instagram;
+    Pintrest: typeof Pintrest;
+    Twitter: typeof Twitter;
 }
 
 export type OutlineTypes = {
@@ -99,6 +107,14 @@ const BoldTypes = {
     "AddSquare": AddSquareBold,
 }
 
+const SocialTypes = {
+    "Google": Google,
+    "Facebook": Facebook,
+    "Instagram": Instagram,
+    "Pintrest": Pintrest,
+    "Twitter": Twitter,
+}
+
 const Icon = ({ fill, stroke, type = "Bold", icon = "ShoppingCart" , size }: IconProps) => {
 
     let IconComponent : any;
@@ -106,10 +122,14 @@ const Icon = ({ fill, stroke, type = "Bold", icon = "ShoppingCart" , size }: Ico
         type BoldTypesKey = keyof typeof BoldTypes;
         const iconObj = icon as BoldTypesKey;
         IconComponent = BoldTypes[iconObj];
-    } else {
+    } else if (type === "Outline") {
         type OutlineTypesKey = keyof typeof OutlineTypes;
         const iconObj = icon as OutlineTypesKey;
         IconComponent = OutlineTypes[iconObj];
+    } else if (type === "Social") {
+        type SocialTypesKey = keyof typeof SocialTypes;
+        const iconObj = icon as SocialTypesKey;
+        IconComponent = SocialTypes[iconObj];
     }
     let height ;
     let width ;

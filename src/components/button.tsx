@@ -19,11 +19,6 @@ type IconProps = {
 }
 
 const ButtonContainer = styled('span')`
-    Icon {
-      fill: #F4694C;
-      stroke: #F4694C;
-    }
-  
     button{
       background: #fff;
       color: #f4694c ;
