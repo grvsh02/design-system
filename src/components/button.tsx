@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import "../index.css";
+import Icon, {BoldTypes, OutlineTypes} from "./icon";
 
 type Button = {
     children?: React.ReactNode;
@@ -9,18 +10,18 @@ type Button = {
     className?: string,
     disabled?: boolean,
     size?: 'base' | 'sm' | 'xs'
+    iconProps?: IconProps
+}
+
+type IconProps = {
+    icon?: keyof BoldTypes | keyof OutlineTypes,
+    Type?: 'Bold' | 'Outline' | 'Social',
 }
 
 const ButtonContainer = styled('span')`
-    img{
-      svg{
-        fill: #f4694c;
-        stroke: #f4694c;
-      }
-      
-      &:hover{
-        color: #fff;
-      }
+    Icon {
+      fill: #F4694C;
+      stroke: #F4694C;
     }
   
     button{
@@ -47,7 +48,7 @@ const ButtonContainer = styled('span')`
     }
 `;
 
-const Button = ({ label, children, className = '', disabled = false ,onClick = () => {}, size = 'base' }: Button) => {
+const Button = ({ label, children, className = '', disabled = false ,onClick = () => {}, size = 'base', iconProps }: Button) => {
 
     const _className = (() => {
         let classNames =  'gap-2 ';
@@ -58,6 +59,9 @@ const Button = ({ label, children, className = '', disabled = false ,onClick = (
         return classNames;
     })();
 
+    const [fill, setFill] = React.useState("#F4694C");
+    const [stroke, setStroke] = React.useState("#F4694C");
+
     const buttonRenderer = () => (
         <button
             aria-label={label}
@@ -67,8 +71,17 @@ const Button = ({ label, children, className = '', disabled = false ,onClick = (
             }}
             disabled={disabled}
             className={_className}
+            onMouseEnter={() => {
+                setFill("#fff")
+                setStroke("#fff")
+            }}
+            onMouseLeave={() => {
+                setFill("#F4694C")
+                setStroke("#F4694C")
+            }}
         >
             {children}
+            {iconProps ? <Icon fill={fill} stroke={stroke} size={size} {...iconProps} /> : null}
         </button>
     );
 

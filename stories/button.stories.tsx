@@ -7,6 +7,7 @@ const meta: Meta = {
     title: 'Basic Elements/Button',
     component: Button,
     argTypes: {
+        size: { control: { type: 'select', options: ['base', 'sm', 'xs'] } },
         children: {
             control: {
                 type: 'text',
@@ -37,4 +38,5 @@ Default.args = {
     className: '',
     children: "Shop Now",
     size: 'base',
+    iconProps: { icon: "Eye", type: "Bold" },
 };

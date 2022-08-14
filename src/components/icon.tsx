@@ -6,12 +6,12 @@ import { TrashOutline, SortOutline, EyeOutline, TickSquareOutline, CloseCircleOu
 type IconProps = {
     fill?: string;
     stroke?: string;
-    type?: string;
+    type?: 'Bold' | 'Outline' | 'Social';
     size?: 'base' | 'sm' | 'xs';
     icon? : keyof BoldTypes | keyof OutlineTypes;
 }
 
-type OutlineTypes = {
+export type OutlineTypes = {
     ShoppingCartOutline: typeof ShoppingCartOutline;
     AddOutline: typeof AddOutline;
     ArrowDownOutline: typeof ArrowDownOutline;
@@ -33,7 +33,8 @@ type OutlineTypes = {
     TrashOutline: typeof TrashOutline;
 }
 
-type BoldTypes = {
+
+export type BoldTypes = {
     Eye: typeof EyeBold;
     Trash: typeof TrashBold;
     Sort: typeof SortBold;
