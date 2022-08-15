@@ -17,10 +17,8 @@ type CardContainer = {
 const CardContainer = styled('div')<CardContainer>`
   padding: 1rem;
   background: ${({ background }) =>
-    background ? background : 'hsla(0, 0%, -20%, 0.05)'
+    background ? background : '#fff'
 };
-  border-radius: 8px;
-  height: 100%;
 `
 
 const Card = ({ title, description,  className = '', titleClassName = '', children, background }: Card) =>  (
