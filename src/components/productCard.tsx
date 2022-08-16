@@ -2,6 +2,7 @@ import React from "react";
 import styled from '@emotion/styled';
 import image from '../../public/img.png';
 import ReactStars from "react-rating-stars-component";
+import IconCard from "./iconCard";
 
 type ProductCard = {
     brand?: string,
@@ -23,30 +24,56 @@ const ProductCardContainer = styled('div')`
   height: 321px;
   width: 267px;
   padding: 20px;
-  background: #fff;  
+  background: #fff;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 400ms, filter 400ms;
+  }
   :hover {
-    background: #e0e0e0;
+    img {
+      filter: brightness(0.8);
+    }
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
     cursor: pointer;
+    div {
+      opacity: 1;
+    }
   }
 `
 
 const ProductImageContainer = styled('div')`
+    position: relative;
     height: 218px;
     width: 227px;
-    img {
-        width: 100%;
-        height: 100%;
-    }
 `
 const ProductDetailsContainer = styled('div')`
     height: 100%;
     width: 100%;
 `
+const OptionsContainer = styled('div')`
+    transition: 0.5s;
+    opacity: 0;
+`
+
 
 const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onClick = () => {}  }: ProductCard) =>  (
     <ProductCardContainer>
-        <ProductImageContainer className="">
-            <img src={imgUrl ? imgUrl : image} alt={"Error O_o"}/>
+        <ProductImageContainer className="static">
+            <div className="absolute">
+                <img src={imgUrl ? imgUrl : image} alt={"Error O_o"}/>
+            </div>
+            <OptionsContainer className="flex absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                <IconCard text="Xl" className="m-0.5"/>
+                <IconCard icon="Circle" type="Bold" className="m-0.5"/>
+                <IconCard icon="Heart" className="m-0.5"/>
+                <IconCard icon="Eye" className="m-0.5"/>
+                <IconCard icon="ShoppingCart" className="m-0.5"/>
+            </OptionsContainer>
         </ProductImageContainer>
         <ProductDetailsContainer>
             <div className="flex justify-between">

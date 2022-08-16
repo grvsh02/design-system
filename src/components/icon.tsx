@@ -1,5 +1,5 @@
 import React from 'react';
-import  { EyeBold, ArrowDownBold, ShoppingCartBold, ArrowSquareRightBold, MinusSquareBold, AddSquareBold, ArrowSquareLeftBold, TickSquareBold, ArrowLeftBold, ArrowRightBold, ArrowUpBold, CategoryBold, FrameBold, HeartBold, SmsTrackingBold, SearchNormalBold, CloseCircleBold, SortBold, TrashBold } from '../icons/bold';
+import  { EyeBold, ArrowDownBold, ShoppingCartBold, ArrowSquareRightBold, MinusSquareBold, AddSquareBold, ArrowSquareLeftBold, TickSquareBold, ArrowLeftBold, ArrowRightBold, ArrowUpBold, CategoryBold, FrameBold, HeartBold, SmsTrackingBold, SearchNormalBold, CloseCircleBold, SortBold, TrashBold, Circle } from '../icons/bold';
 import { TrashOutline, SortOutline, EyeOutline, TickSquareOutline, CloseCircleOutline, SearchNormalOutline, SmsTrackingOutline, HeartOutline, FrameOutline, CategoryOutline, ArrowUpOutline, ArrowRightOutline, ArrowLeftOutline, ArrowSquareLeftOutline, ArrowDownOutline, ArrowRight1Outline, AddOutline, ShoppingCartOutline, MinusOutline,  } from '../icons/outline';
 import { Google, Facebook, Instagram, Pintrest, Twitter } from '../icons/social';
 
@@ -62,6 +62,7 @@ export type BoldTypes = {
     TickSquare: typeof TickSquareBold;
     MinusSquare: typeof MinusSquareBold;
     AddSquare: typeof AddSquareBold;
+    Circle: typeof Circle;
 }
 
 const OutlineTypes = {
@@ -83,7 +84,7 @@ const OutlineTypes = {
     "ArrowDown" : ArrowDownOutline,
     "TickSquare" : TickSquareOutline,
     "MinusSquare" : MinusOutline,
-    "AddSquare" : AddOutline
+    "AddSquare" : AddOutline,
 }
 
 const BoldTypes = {
@@ -106,6 +107,7 @@ const BoldTypes = {
     "TickSquare": TickSquareBold,
     "MinusSquare": MinusSquareBold,
     "AddSquare": AddSquareBold,
+    "Circle" : Circle,
 }
 
 const SocialTypes = {
