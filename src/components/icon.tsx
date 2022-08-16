@@ -60,8 +60,8 @@ export type BoldTypes = {
     ArrowLeft: typeof ArrowLeftBold;
     ArrowDown: typeof ArrowDownBold;
     TickSquare: typeof TickSquareBold;
-    MinusSquare: typeof MinusSquareBold;
-    AddSquare: typeof AddSquareBold;
+    Minus: typeof MinusSquareBold;
+    Add: typeof AddSquareBold;
     Circle: typeof Circle;
 }
 
@@ -83,8 +83,8 @@ const OutlineTypes = {
     "ArrowLeft" : ArrowLeftOutline,
     "ArrowDown" : ArrowDownOutline,
     "TickSquare" : TickSquareOutline,
-    "MinusSquare" : MinusOutline,
-    "AddSquare" : AddOutline,
+    "Minus" : MinusOutline,
+    "Add" : AddOutline,
 }
 
 const BoldTypes = {
