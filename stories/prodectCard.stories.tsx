@@ -4,7 +4,7 @@ import { Meta, Story} from '@storybook/react';
 import ProductCard from '../src/components/productCard';
 
 const meta: Meta = {
-    title: 'Product/Card',
+    title: 'Product/Product Card',
     component: ProductCard,
     argTypes: {
         children: {
@@ -28,11 +28,11 @@ export const Default = Template.bind({});
 
 Default.args = {
     name: 'Louis Vuitton Round Neck Top',
-    price: '100',
+    price: '2050',
     brand: 'Lois Vuitton',
     productProps: {
         rating: 4,
-        strikePrice: '250',
+        strikePrice: '2250',
         colorOptions: ["Red", "Blue", "Green"],
         sizeOptions: ["S", "M", "L", "XL"],
     }

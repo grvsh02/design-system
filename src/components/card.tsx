@@ -8,6 +8,8 @@ type Card = {
     titleClassName?: string,
     className?: string,
     background?: string,
+    height?: string,
+    width?: string,
 }
 
 type CardContainer = {
@@ -15,7 +17,7 @@ type CardContainer = {
 }
 
 const CardContainer = styled('div')<CardContainer>`
-  padding: 1rem;
+  //padding: 1rem;
   background: ${({ background }) =>
     background ? background : '#fff'
 };
