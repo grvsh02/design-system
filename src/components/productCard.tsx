@@ -11,6 +11,8 @@ type ProductCard = {
     price?: number;
     productProps?: ProductProps;
     onClick?: (id: number) => void;
+    addToCart?: () => void;
+    addToFavorite?: () => void;
 }
 
 type ProductProps = {
@@ -61,8 +63,8 @@ const OptionsContainer = styled('div')`
 `
 
 
-const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onClick = () => {}  }: ProductCard) =>  (
-    <ProductCardContainer>
+const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onClick = () => {}, addToFavorite = () => {}, addToCart = () => {}  }: ProductCard) =>  (
+    <ProductCardContainer onClick={() => onClick}>
         <ProductImageContainer className="static">
             <div className="absolute">
                 <img src={imgUrl ? imgUrl : image} alt={"Error O_o"}/>
@@ -70,9 +72,9 @@ const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onCli
             <OptionsContainer className="flex absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
                 <IconCard text="Xl" className="m-0.5"/>
                 <IconCard icon="Circle" type="Bold" className="m-0.5"/>
-                <IconCard icon="Heart" className="m-0.5"/>
-                <IconCard icon="Eye" className="m-0.5"/>
-                <IconCard icon="ShoppingCart" className="m-0.5"/>
+                <IconCard icon="Heart" className="m-0.5" onClick={() => addToFavorite}/>
+                <IconCard icon="Eye" className="m-0.5" />
+                <IconCard icon="ShoppingCart" className="m-0.5" onClick={() => addToCart}/>
             </OptionsContainer>
         </ProductImageContainer>
         <ProductDetailsContainer>

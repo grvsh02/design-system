@@ -10,6 +10,7 @@ type Card = {
     background?: string,
     height?: string,
     width?: string,
+    onClick?: () => void,
 }
 
 type CardContainer = {
@@ -17,14 +18,13 @@ type CardContainer = {
 }
 
 const CardContainer = styled('div')<CardContainer>`
-  //padding: 1rem;
   background: ${({ background }) =>
     background ? background : '#fff'
 };
 `
 
-const Card = ({ title, description,  className = '', titleClassName = '', children, background }: Card) =>  (
-    <CardContainer className={className} background={background}>
+const Card = ({ title, description,  className = '', titleClassName = '', children, background, onClick = () => {} }: Card) =>  (
+    <CardContainer className={className} background={background} onClick={() => onClick}>
         {(title || description) &&
             <div className="px-2 pt-2">
                 {title &&
