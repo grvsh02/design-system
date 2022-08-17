@@ -19,7 +19,7 @@ export default meta;
 const Template: Story = args => (
     <div className="flex justify-center">
         <IconCard text="XL" />
-        <IconCard icon="heart" />
+        <IconCard icon="Heart" />
     </div>
 );
 

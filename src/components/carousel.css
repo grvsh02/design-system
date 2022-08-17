@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body, #app {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #222326;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: all 0.35s ease 0s;
+}
+
+.carousel-card {
+    min-width: 50%;
+    width: 50%;
+    height: 600px;
+}
+
+.carousel-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.6s cubic-bezier(.165,.84,.44,1);
+}
+
+.carousel-card:not(.active) .carousel-card-content {
+    transform: scale(0.9);
+    filter: blur(5px);
+}
+
+.carousel-card.active .carousel-card-title {
+    opacity: 1;
+    transform: translateY(-50%)
+}
+
+.carousel-card:not(.active) .carousel-card-title {
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+.carousel-card-title {
+    margin-left: 50px;
+    position: relative;
+    color: white;
+    width: 250px;
+    top: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0.5;
+    transition: all 0.8s ease .3s;
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(255,0,0,0));
+    padding: 10px;
+}
+
+.carousel-card-title:hover {
+    opacity: 1;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dot {
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+}
+
+.dot:hover {
+    cursor: pointer
+}
+
+.dot:not(:last-child) {
+    margin-right: 10px;
+}
+
+.dot.active {
+    background-color: #c9c9c9
+}
+
+.dot:not(.active) {
+    background-color: #545454
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.button-group > * {
+    height: 32px;
+    width: 77px;
+    border: none;
+}
+
+.button-group button {
+    background-color: #060606;
+    color: #e5e5e5;
+}
+
+.button-group button:hover {
+    cursor: pointer
+}
+
+.button-group button:disabled {
+    opacity: 0.5
+}
+
+.button-group button:is(:first-child) {
+    margin-right: 20px
+}
