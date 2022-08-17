@@ -86,12 +86,12 @@ const PageNavigator = ({
         <div className={`flex items-center justify-center text-center pt-4 ${className}`}>
             <div style={{ userSelect: 'none' }}>
                 {(showEdges && page > 2) && (
-                    <Button className="w-12 mx-1" onClick={() => setPage(1)}>
+                    <Button className="w-12 mx-1" inline={true} onClick={() => setPage(1)}>
                         {icons?.start}
                     </Button>
                 )}
                 {(showControls && page > 1) && (
-                    <Button className="w-16 mx-1" onClick={() => setPage(page - 1)}>
+                    <Button className="w-16 mx-1" inline={true} onClick={() => setPage(page - 1)}>
                         {icons?.prev}
                     </Button>
                 )}
@@ -102,18 +102,19 @@ const PageNavigator = ({
                             key={`page_${item}_${index}`}
                             className={`w-12 mx-1 ${page === item ? 'active' : ''}`}
                             onClick={() => setPage(item)}
+                            inline={true}
                         >
                             {item}
                         </Button>
                     )}
                 </React.Fragment>
                 {(showControls && !(page + 1 >= length)) && (
-                    <Button className="w-16 mx-1" onClick={() => setPage(page + 1)}>
+                    <Button className="w-16 mx-1" inline={true} onClick={() => setPage(page + 1)}>
                         {icons?.next}
                     </Button>
                 )}
                 {(showEdges && (page + 1 < length)) && (
-                    <Button className="w-12 mx-1" onClick={() => setPage(length)}>
+                    <Button className="w-12 mx-1" inline={true} onClick={() => setPage(length)}>
                         {icons?.end}
                     </Button>
                 )}

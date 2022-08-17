@@ -9,9 +9,10 @@ type Button = {
     label?: string,
     className?: string,
     disabled?: boolean,
-    size?: 'base' | 'sm' | 'xs'
-    iconProps?: IconProps
-    type?: 'primary' | 'basic' | 'selected'
+    size?: 'base' | 'sm' | 'xs',
+    iconProps?: IconProps,
+    type?: 'primary' | 'basic' | 'selected',
+    inline?: boolean,
 }
 
 type IconProps = {
@@ -20,7 +21,8 @@ type IconProps = {
 }
 
 type ButtonContainerProps = {
-    type?: "primary" | "basic" | "selected"
+    type?: "primary" | "basic" | "selected",
+    inline?: boolean,
 }
 
 const ButtonContainer = styled('span')<ButtonContainerProps>`
@@ -29,7 +31,7 @@ const ButtonContainer = styled('span')<ButtonContainerProps>`
       color: ${props => props.type === "primary" ? '#f4694c' : props.type === "basic" ? '#bdbdbd' : '#fff'};
       border: ${props => props.type === "primary" ? '0.0625rem solid #f4694c' : props.type === "basic" ? '0.0625rem solid #bdbdbd' : '0.0625rem solid #f4694c'};
       border-radius: 0.3125rem; 
-      display: inline-block;
+      display: ${props => props.inline ? 'inline-block' : 'flex'};
       position: relative;
       overflow: hidden;
       text-align: center;
@@ -48,7 +50,7 @@ const ButtonContainer = styled('span')<ButtonContainerProps>`
     }
 `;
 
-const Button = ({ label, children, className = '', disabled = false ,onClick = () => {}, size = 'base', iconProps, type = "primary" }: Button) => {
+const Button = ({ label, children, className = '', disabled = false ,onClick = () => {}, size = 'base', iconProps, type = "primary", inline = false }: Button) => {
 
     const _className = (() => {
         let classNames =  'gap-2 ';
@@ -86,7 +88,7 @@ const Button = ({ label, children, className = '', disabled = false ,onClick = (
     );
 
     return (
-        <ButtonContainer type={type}>
+        <ButtonContainer type={type} inline={inline}>
             {buttonRenderer()}
         </ButtonContainer>
     )
