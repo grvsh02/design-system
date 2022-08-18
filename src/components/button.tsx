@@ -11,7 +11,7 @@ type Button = {
     disabled?: boolean,
     size?: 'base' | 'sm' | 'xs',
     iconProps?: IconProps,
-    type?: 'primary' | 'basic' | 'selected',
+    type?: 'primary' | 'basic' | 'selected' | "secondary",
     inline?: boolean,
 }
 
@@ -21,14 +21,14 @@ type IconProps = {
 }
 
 type ButtonContainerProps = {
-    type?: "primary" | "basic" | "selected",
+    type?: "primary" | "basic" | "selected" | "secondary",
     inline?: boolean,
 }
 
 const ButtonContainer = styled('span')<ButtonContainerProps>`
     button{
-      background: ${props => props.type === "primary" ? "#fff" : props.type === "selected" ? "#f4694c" : "#fff"};
-      color: ${props => props.type === "primary" ? '#f4694c' : props.type === "basic" ? '#bdbdbd' : '#fff'};
+      background: ${props => props.type === "primary" ? "#fff" : props.type === "selected" ? "#f4694c" : props.type === "basic" ? "#fff" : null};
+      color: ${props => props.type === "primary" ? '#f4694c' : props.type === "basic" ? '#bdbdbd' : props.type === "secondary" ? '#f4694c' : "#fff" };
       border: ${props => props.type === "primary" ? '0.0625rem solid #f4694c' : props.type === "basic" ? '0.0625rem solid #bdbdbd' : '0.0625rem solid #f4694c'};
       border-radius: 0.3125rem; 
       display: ${props => props.inline ? 'inline-block' : 'flex'};

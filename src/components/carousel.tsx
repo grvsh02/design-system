@@ -1,5 +1,6 @@
 import React from 'react';
 import './carousel.css';
+import Button from "./button";
 
 type CarouselContainerProps = {
     className?: string;
@@ -7,6 +8,14 @@ type CarouselContainerProps = {
         id?: number;
         image?: string;
         title?: string;
+        content?: {
+            text?: string;
+            tag?: string;
+            buttonText?: string;
+            onClick?: () => void;
+            spanText?: string;
+            conditionText?: string;
+        };
     }[];
 }
 
@@ -41,13 +50,29 @@ const CarouselContainer = ({className, data = []}: CarouselContainerProps) => {
     return (
         <div className={'app' + `${className}`} >
             <Carousel activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
-                {data.map((card, i) => {
+                {data.map((card: any , i) => {
                     return (<CarouselCard key={card.id} active={activeIndex === i}>
                         <div className='carousel-card-content' style={{backgroundImage: `url("${card.image}")`}}>
                             <div className='carousel-card-title'>
-                                {/*<div className="bg-gradient-to-r from-black p-3">*/}
-                                    {card.title}
-                                {/*</div>*/}
+                                {card.content &&
+                                <div className="carousel-card-title-card p-14">
+                                    <div className="flex">
+                                        {card.content.tag &&
+                                        <div className="tag">
+                                            {card.content.tag}
+                                        </div>}
+                                        {card.content.spanText &&
+                                        <div className="span-2">{card.content.spanText}</div>}
+                                    </div>
+                                    {card.content.text &&
+                                    <div className="span-3">{card.content.text}</div>}
+                                    {card.content.conditionText &&
+                                    <div className="span-1">{card.content.conditionText}</div>}
+                                    {card.content.buttonText &&
+                                    <Button className="mt-2" type="secondary" onClick={card.content.onClick ? card.content.onClick : () => {}}>
+                                        {card.content.buttonText}
+                                    </Button>}
+                                </div>}
                             </div>
                         </div>
                     </CarouselCard>)
@@ -67,8 +92,8 @@ const Carousel = ({activeIndex, setActiveIndex, children}: CarouselProps) => {
 
     useEffect(() => {
         console.log(activeIndex)
-        const initialTranslateVal = carouselRef.current.offsetWidth / 4;
-        const diffAmount = initialTranslateVal * 2;
+        const initialTranslateVal = carouselRef.current.offsetWidth / 206;
+        const diffAmount = initialTranslateVal * 206;
         const translate: any = activeIndex === 0 ? initialTranslateVal : initialTranslateVal - (activeIndex * diffAmount)
         setCarouselTranslate(translate);
     }, [activeIndex]);
