@@ -69,7 +69,7 @@ const CarouselContainer = ({className, data = []}: CarouselContainerProps) => {
                                     {card.content.conditionText &&
                                     <div className="span-1">{card.content.conditionText}</div>}
                                     {card.content.buttonText &&
-                                    <Button className="mt-2" type="secondary" onClick={card.content.onClick ? card.content.onClick : () => {}}>
+                                    <Button className="mt-2" type="outline" onClick={card.content.onClick ? card.content.onClick : () => {}}>
                                         {card.content.buttonText}
                                     </Button>}
                                 </div>}
@@ -91,7 +91,6 @@ const Carousel = ({activeIndex, setActiveIndex, children}: CarouselProps) => {
     const [carouselTranslate, setCarouselTranslate] = useState(null);
 
     useEffect(() => {
-        console.log(activeIndex)
         const initialTranslateVal = carouselRef.current.offsetWidth / 206;
         const diffAmount = initialTranslateVal * 206;
         const translate: any = activeIndex === 0 ? initialTranslateVal : initialTranslateVal - (activeIndex * diffAmount)

@@ -8,6 +8,7 @@ const meta: Meta = {
     component: Button,
     argTypes: {
         size: { control: { type: 'select', options: ['base', 'sm', 'xs'] } },
+        type: { control: { type: 'select', options: ['primary', 'secondary', "basic", "selected"] } },
         children: {
             control: {
                 type: 'text',

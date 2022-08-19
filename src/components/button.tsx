@@ -11,7 +11,7 @@ type Button = {
     disabled?: boolean,
     size?: 'base' | 'sm' | 'xs',
     iconProps?: IconProps,
-    type?: 'primary' | 'basic' | 'selected' | "secondary",
+    type?: 'primary' | 'basic' | 'selected' | "secondary" | "outline",
     inline?: boolean,
 }
 
@@ -21,15 +21,15 @@ type IconProps = {
 }
 
 type ButtonContainerProps = {
-    type?: "primary" | "basic" | "selected" | "secondary",
+    type?: "primary" | "basic" | "selected" | "secondary" | "outline",
     inline?: boolean,
 }
 
 const ButtonContainer = styled('span')<ButtonContainerProps>`
     button{
       background: ${props => props.type === "primary" ? "#fff" : props.type === "selected" ? "#f4694c" : props.type === "basic" ? "#fff" : null};
-      color: ${props => props.type === "primary" ? '#f4694c' : props.type === "basic" ? '#bdbdbd' : props.type === "secondary" ? '#f4694c' : "#fff" };
-      border: ${props => props.type === "primary" ? '0.0625rem solid #f4694c' : props.type === "basic" ? '0.0625rem solid #bdbdbd' : '0.0625rem solid #f4694c'};
+      color: ${props => props.type === "primary" ? '#f4694c' : props.type === "basic" ? '#bdbdbd' : props.type === "secondary" ? '#000000' : props.type === "outline" ? "#f4694c" : "#fff" };
+      border: ${props => props.type === "primary" ? '0.0625rem solid #f4694c' : props.type === "basic" ? '0.0625rem solid #bdbdbd' : props.type === "secondary" ? null : '0.0625rem solid #f4694c'};
       border-radius: 0.3125rem; 
       display: ${props => props.inline ? 'inline-block' : 'flex'};
       position: relative;
@@ -44,8 +44,8 @@ const ButtonContainer = styled('span')<ButtonContainerProps>`
       }
       &:focus, &:hover {
         cursor: pointer;
-        background: #f4694c;
-        color: #fff;
+        background: ${props => props.type === "secondary" ? '#fce1db' : '#f4694c'};
+        color: ${props => props.type === "secondary" ? '#000000' : '#fff'};
       }
     }
 `;
