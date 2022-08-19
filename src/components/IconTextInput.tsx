@@ -23,7 +23,7 @@ const TextFieldContainer = styled.div<{border: string}>`
     width: 100%;
     border: 1px solid ${props  => props.border};
     display: flex;
-
+    font-family: Pangram, sans-serif;
 `;
 
 const InputContainer = styled.input`

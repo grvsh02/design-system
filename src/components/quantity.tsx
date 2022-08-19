@@ -16,6 +16,7 @@ const QuantityContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     border: 0.0625rem solid #828282;
+    font-family: Pangram, sans-serif;
 `
 
 const QuantityInput = ({ quantity, onChange = () => {}, min = 1, max = 10 }: QuantityProps) => {

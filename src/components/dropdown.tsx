@@ -22,6 +22,7 @@ const TextFieldContainer = styled.div`
     width: 100%;
     color: #030e19;
     font-size: 14px;
+    font-family: Pangram, sans-serif;
 `;
 
 const DropDownContainer = styled.div`
@@ -31,6 +32,7 @@ const DropDownContainer = styled.div`
     border: 1px solid #828282;
     color: #030e19;
     font-size: 10px;
+    font-family: Pangram, sans-serif;
     ::placeholder {
         color: #828282;
     }

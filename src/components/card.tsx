@@ -20,7 +20,8 @@ type CardContainer = {
 const CardContainer = styled('div')<CardContainer>`
   background: ${({ background }) =>
     background ? background : '#fff'
-};
+    };
+  font-family: Pangram, sans-serif;
 `
 
 const Card = ({ title, description,  className = '', titleClassName = '', children, background, onClick = () => {} }: Card) =>  (

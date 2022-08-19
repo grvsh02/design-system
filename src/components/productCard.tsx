@@ -29,6 +29,7 @@ const ProductCardContainer = styled('div')`
   background: #fff;
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
+  font-family: Pangram, sans-serif;
   img {
     position: relative;
     width: 100%;

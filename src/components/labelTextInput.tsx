@@ -23,6 +23,7 @@ const TextFieldContainer = styled.div`
     width: 100%;
     color: #030e19;
     font-size: 14px;
+    font-family: Pangram, sans-serif;
 `;
 
 const InputContainer = styled.input`
