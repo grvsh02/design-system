@@ -7,7 +7,7 @@ type DropdownProps = {
     label?: string;
     className?: string,
     onClick?: () => void,
-    isSelected?: boolean,
+    isSelected?: string,
     onClose?: () => void,
     disabled?: boolean,
     onChange?: (value : any) => void,
@@ -64,7 +64,7 @@ const DropDownMenu = styled('div')`
 const Dropdown = ({ items = [], onClose = () => {}, className = '', placeholder, label, isSelected, disabled, onChange = () => {} } : DropdownProps) =>{
 
     const [isOpen, setIsOpen] = React.useState(false);
-    const [selectedItem, setSelectedItem] = React.useState(isSelected ? items[0] : "");
+    const [selectedItem, setSelectedItem] = React.useState(isSelected ? isSelected : "");
 
     const handleChange = (e: any) => {
         const value = e.currentTarget.value;
@@ -84,7 +84,7 @@ const Dropdown = ({ items = [], onClose = () => {}, className = '', placeholder,
                 </div>
                 <DropDownContainer className="justify-between" onClick={() => setIsOpen(true)}>
                     {selectedItem !== "" ? selectedItem : placeholder}
-                    <div>
+                    <div className="ml-1">
                         <Icon size="sm" type="Outline" icon="ArrowDown" />
                     </div>
                 </DropDownContainer>

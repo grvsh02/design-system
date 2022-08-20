@@ -2,6 +2,8 @@ import React from "react";
 import styled from '@emotion/styled';
 import image from '../../public/img.png';
 import IconCard from "./iconCard";
+import Dropdown from "./dropdown";
+import QuantityInput from "./quantity";
 
 type ProductCard = {
     brand?: string,
@@ -12,6 +14,14 @@ type ProductCard = {
     onClick?: (id: number) => void;
     onCancel?: () => void;
     moveToFavorite?: () => void;
+    quantity?: number;
+    onQuantityChange?: (Qty: number) => void;
+    sizesAvailable?: {
+        name?: string;
+    }[]
+    size?: string;
+    onSizeChange?: (str: string) => void;
+    maxQuantity?: number;
 }
 
 type ProductProps = {
@@ -23,7 +33,7 @@ type ProductProps = {
 
 const ProductCardContainer = styled('div')`
   height: auto;
-  width: 70%;
+  width: 50%;
   padding: 20px;
   background: #fff;
   transform: scale(0.95);
@@ -49,7 +59,14 @@ const ProductDetailsContainer = styled('div')`
     
 `
 
-const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onClick = () => {}, moveToFavorite = () => {}, onCancel = () => {}  }: ProductCard) =>  (
+const ProductCard = ({
+                         brand, name = "", imgUrl, price,
+                         productProps = {}, onClick = () => {}, moveToFavorite = () => {},
+                         onCancel = () => {}, sizesAvailable, size, onSizeChange = () => {},
+                         onQuantityChange = () => {}, quantity, maxQuantity = 10
+    }: ProductCard) =>  {
+
+    return (
     <ProductCardContainer onClick={() => onClick}>
         <div className="flex">
             <ProductImageContainer>
@@ -72,17 +89,21 @@ const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onCli
                             ₹{productProps.strikePrice}
                         </div>
                     }
-                    <div style={{ fontSize: '16px', color: " #f4694c" }} className="pt-1 pr-1 pb-1">
+                    <div style={{ fontSize: '16px', color: "#f4694c" }} className="pt-1 pr-1 pb-1">
                         ₹{price}
                     </div>
                 </div>
+                <div className="flex">
+
+                </div>
             </ProductDetailsContainer>
         </div>
-        <div className="border-2 h-auto">
+        <div>
             <IconCard icon="Trash" type="Outline" className="flex" onClick={onCancel}/>
         </div>
     </ProductCardContainer>
-);
+    )
+};
 
 
 export default ProductCard;

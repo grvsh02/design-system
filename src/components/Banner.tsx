@@ -11,8 +11,7 @@ type BannerProps = {
 
 const BannerContainer = styled.div`
   height: 210px;
-  width: 340px;  
-  
+  width: 340px;
   img {
     height: 210px;
     width: 340px;
@@ -23,8 +22,7 @@ const BannerContainer = styled.div`
 const BackDrop = styled.div`
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.5); 
-  border: 2px solid blue;
+  background: rgba(0,0,0,0.5);
 `
 
 const Text1 = styled.div`
@@ -46,7 +44,7 @@ const Text2 = styled.div`
 
 const Banner = ({ imgUrl, className = '', category, text }: BannerProps) => {
     return (
-        <BannerContainer className={'relative flex justify-center items-center' + `${className}`}>
+        <BannerContainer className={'relative flex justify-center items-center ' + `${className}`}>
 
             <img src={imgUrl} alt="Not Found :_(" className="absolute border-2 border-black"/>
             <BackDrop className="absolute" />

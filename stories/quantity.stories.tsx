@@ -18,7 +18,7 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story = args => (
-    <QuantityInput {...args} />
+    <QuantityInput label="Quantity" {...args} />
 );
 
 export const Default = Template.bind({});

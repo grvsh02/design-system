@@ -35,5 +35,14 @@ Default.args = {
         strikePrice: '2250',
         colorOptions: ["Red", "Blue", "Green"],
         sizeOptions: ["S", "M", "L", "XL"],
-    }
+    },
+    size: "S",
+    quantity: 1,
+    sizesAvailable: [
+        {"name": "S"},
+        {"name": "M"},
+        {"name": "L"},
+        {"name": "XL"},
+    ],
+    maxQuantity: 10,
 }

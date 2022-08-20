@@ -11,10 +11,12 @@ type Card = {
     height?: string,
     width?: string,
     onClick?: () => void,
+    clickable?: boolean,
 }
 
 type CardContainer = {
     background?: string
+    clickable?: boolean
 }
 
 const CardContainer = styled('div')<CardContainer>`
@@ -22,10 +24,13 @@ const CardContainer = styled('div')<CardContainer>`
     background ? background : '#fff'
     };
   font-family: Pangram, sans-serif;
+  :hover {
+    cursor: ${({ clickable }) => clickable ? 'pointer' : 'default'};
+  }
 `
 
-const Card = ({ title, description,  className = '', titleClassName = '', children, background, onClick = () => {} }: Card) =>  (
-    <CardContainer className={className} background={background} onClick={() => onClick}>
+const Card = ({ title, description,  className = '', titleClassName = '', children, background, onClick = () => {}, clickable }: Card) =>  (
+    <CardContainer className={className} background={background} onClick={() => onClick} clickable={clickable}>
         {(title || description) &&
             <div className="px-2 pt-2">
                 {title &&
