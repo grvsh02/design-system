@@ -32,8 +32,8 @@ const ProductCardContainer = styled('div')`
   font-family: Pangram, sans-serif;
   img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 240px;
+    height: 330px;
     transition: transform 400ms, filter 400ms;
   }
   :hover {
@@ -63,13 +63,28 @@ const OptionsContainer = styled('div')`
     opacity: 0;
 `
 
+type imageProp = {
+    imgUrl?: string;
+}
+
+const ProductImage = styled('div')<imageProp>`
+  width: 227px;
+  height: 218px;
+  border: 2px solid blue;
+  z-index: 2;
+  img {
+    width: 227px;
+    height: 218px;
+  }
+`
+
 
 const ProductCard = ({ brand, name = "", imgUrl, price, productProps = {}, onClick = () => {}, addToFavorite = () => {}, addToCart = () => {}  }: ProductCard) =>  (
     <ProductCardContainer onClick={() => onClick}>
         <ProductImageContainer className="static">
-            <div className="absolute">
-                <img src={imgUrl ? imgUrl : image} alt={"Error O_o"}/>
-            </div>
+            <ProductImage className="absolute" imgUrl={imgUrl}>
+                <img src={imgUrl ? imgUrl : image} alt="Not Found :_("/>
+            </ProductImage>
             <OptionsContainer className="flex absolute top-52 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
                 <IconCard text="Xl" className="m-0.5"/>
                 <IconCard icon="Circle" type="Bold" className="m-0.5"/>

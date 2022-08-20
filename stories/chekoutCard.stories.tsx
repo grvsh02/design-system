@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { Meta, Story} from '@storybook/react';
-import ProductCard from '../src/components/productCard';
+import CheckoutCard from '../src/components/checkoutCard';
 
 const meta: Meta = {
-    title: 'Product/Product Card',
-    component: ProductCard,
+    title: 'Product/Checkout Card',
+    component: CheckoutCard,
     argTypes: {
         children: {
             control: {
@@ -21,7 +21,7 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story = args => (
-    <ProductCard {...args}/>
+    <CheckoutCard {...args}/>
 );
 
 export const Default = Template.bind({});
@@ -35,6 +35,5 @@ Default.args = {
         strikePrice: '2250',
         colorOptions: ["Red", "Blue", "Green"],
         sizeOptions: ["S", "M", "L", "XL"],
-    },
-    imgUrl: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80"
+    }
 }

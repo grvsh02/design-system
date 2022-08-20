@@ -12,7 +12,7 @@ type iconCardProps = {
 
 const IconCard = ({icon, text, type = "Outline", className, onClick = () => {} }: iconCardProps) => {
     return (
-        <Card className={"h-9 w-9 flex justify-center " + `${className}`} background="#ffffff" onClick = {() => onClick}>
+        <Card className={"h-9 w-9 flex justify-center hover:cursor-pointer " + `${className}`} background="#ffffff" onClick = {() => onClick}>
             {icon ? (
                 <div className="flex justify-center items-center">
                     <Icon icon={icon} type={type} fill="black" size="base"/>
