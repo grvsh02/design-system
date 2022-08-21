@@ -21,7 +21,9 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story = args => (
-    <CheckoutCard {...args}/>
+    <div className="bg-white">
+        <CheckoutCard {...args}/>
+    </div>
 );
 
 export const Default = Template.bind({});
