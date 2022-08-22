@@ -1,5 +1,5 @@
 {
-  "name": "homezy-design-system",
+  "name": "@grvsh02/design-system",
   "version": "0.1.0",
   "private": false,
   "scripts": {
@@ -8,6 +8,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
+    "storybook-legacy": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=dd4e3128dba7"
   },
@@ -85,7 +86,13 @@
   "_id": "my-app@0.1.0",
   "description": "Design system for homezy platform ",
   "main": "index.tsx",
-  "repository": "git@github.com:grvsh02/design-components.git",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/grvsh02/design-system.git"
+  },
   "author": "Gaurav <gaurav021201@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
 }
