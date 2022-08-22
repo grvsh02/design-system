@@ -1,2 +1,16 @@
 export {default as Button} from './components/button';
 export {default as Card} from './components/card';
+export {default as Icon} from './components/icon';
+export {default as Tabs} from './components/tabs';
+export {default as IconCard} from './components/iconCard';
+export {default as NavBar} from './components/navBar';
+export {default as Banner} from './components/Banner';
+export {default as Carousel} from './components/carousel';
+export {default as CheckoutCard} from './components/checkoutCard';
+export {default as Dropdown} from './components/dropdown';
+export {default as IconTextInput} from './components/IconTextInput';
+export {default as LabelTextInput} from './components/labelTextInput';
+export {default as Pagination} from './components/pagination';
+export {default as ProductCard} from './components/productCard';
+export {default as QuantityInput} from './components/quantity';
+export {default as Search} from './components/searchBar';

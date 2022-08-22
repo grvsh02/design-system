@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import NavBar from '../src/components/navbar';
+import NavBar from '../src/components/navBar';
 
 const meta: Meta = {
     title: 'Navigation/Navbar',
