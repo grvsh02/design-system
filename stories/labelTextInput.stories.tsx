@@ -9,7 +9,6 @@ const meta: Meta = {
     component: LabelTextInput,
     argTypes: {
         type: { control: { type: 'select', options: ['email', 'number', 'password', 'text','textarea','url'] } },
-        placeholder: { control: { type: 'select', options: ['email', 'number', 'password', 'text','textarea','url'] } },
         children: {
             control: {
                 type: 'text',
