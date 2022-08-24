@@ -28,4 +28,10 @@ export const Default = Template.bind({});
 Default.args = {
     text: 'XL',
     icon: 'Heart',
-};
+    outline: true,
+    className: 'bg-red-500',
+    onClick: () => {
+        console.log('clicked');
+    }
+
+}
