@@ -26,4 +26,17 @@ const Template: Story = args => (
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+    label: 'label',
+    placeholder: 'email',
+    value: '',
+    onChange: () => {},
+    charLimit: null,
+    className: '',
+    required: false,
+    disabled: false,
+    type: 'text',
+    errorText: '',
+    showCharLimit: false,
+    showLimit: false,
+};
