@@ -1,6 +1,6 @@
 {
-  "name": "@grvsh02/design-system",
-  "version": "0.1.0",
+  "name": "@grvsh02/homezy-design-system",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "storybook-legacy": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=dd4e3128dba7"
+    "chromatic": "npx chromatic --project-token=dd4e3128dba7",
+    "build-library": "rollup -c"
   },
   "eslintConfig": {
     "extends": [
@@ -43,8 +44,13 @@
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.18.6",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
     "@size-limit/preset-small-lib": "^6.0.4",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
@@ -70,29 +76,28 @@
     "react-is": "^17.0.2",
     "react-waypoint": "^10.1.0",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
     "size-limit": "^6.0.4",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "@rollup/plugin-replace": "^4.0.0",
     "autoprefixer": "10.4.0",
     "postcss": "8.3.11",
     "react-rating-stars-component": "^2.2.0",
+    "rollup": "^2.78.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-import-css": "^3.0.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "svgson": "^5.2.1",
     "tailwindcss": "2.2.19"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-app@0.1.0",
   "description": "Design system for homezy platform ",
-  "main": "index.tsx",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/grvsh02/design-system.git"
-  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "author": "Gaurav <gaurav021201@gmail.com>",
-  "license": "MIT",
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
-  }
+  "license": "MIT"
 }
