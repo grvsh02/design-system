@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Icon from "./icon";
 
 type IconTextInput = {
     label?: string;
