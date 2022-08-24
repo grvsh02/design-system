@@ -43,11 +43,5 @@ Default.args = {
     page: 11,
     showControls: true,
     showEdges: true,
-    icons: {
-        start: <span className="material-icons">first_page</span>,
-        prev: <span className="material-icons">chevron_left</span>,
-        next: <span className="material-icons">chevron_right</span>,
-        end: <span className="material-icons">last_page</span>
-    }
 };
 
