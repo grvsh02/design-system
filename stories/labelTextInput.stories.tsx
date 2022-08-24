@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react';
 import LabelTextInput from '../src/components/labelTextInput';
-import dropdown from "../src/components/dropdown";
-dropdown
+
 
 const meta: Meta = {
     title: 'User Inputs/LabelTextInput',
     component: LabelTextInput,
     argTypes: {
         type: { control: { type: 'select', options: ['email', 'number', 'password', 'text','textarea','url'] } },
+        placeholder: { control: { type: 'select', options: ['email', 'number', 'password', 'text','textarea','url'] } },
         children: {
             control: {
                 type: 'text',
