@@ -99,5 +99,6 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Gaurav <gaurav021201@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/grvsh02/design-system.git"
 }

@@ -3,11 +3,6 @@ import logo from '../../public/Homezy.png';
 import styled from "@emotion/styled";
 import Button from "./button";
 import IconCard from "./iconCard";
-import SearchBar from "./searchBar";
-
-type NavBarProps = {
-
-}
 
 const NavbarContainer = styled('div')`
     height: 76px;
@@ -20,12 +15,6 @@ const NavbarContainer = styled('div')`
     align-items: center;
     padding: 0px 20px;
 `
-
-type TabItemsProps = {
-    label?: string,
-    disabled?: boolean,
-    icon?: any,
-}
 
 const TabContainer = styled.div`
     display: flex;
@@ -65,7 +54,6 @@ const NavBar = ({}) => {
                 </TabContainer>
             </div>
             <div className="flex justify-end items-center w-2/5 h-full">
-                <SearchBar/>
                 <div>
                     <NavIcons>
                         <IconCard icon="Frame" type="Outline" />

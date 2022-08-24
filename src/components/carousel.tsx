@@ -30,14 +30,12 @@ type CarouselCardProps = {
     children: any;
 }
 
-const {useState, useEffect, useRef} = React;
-
 const CarouselContainer = ({className, data = []}: CarouselContainerProps) => {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = React.useState(0);
 
     const MINUTE_MS = 5000;
 
-    useEffect(() => {
+    React.useEffect(() => {
         const interval = setInterval(() => {
             if (activeIndex === data.length - 1) {
                 setActiveIndex(0);
@@ -87,10 +85,10 @@ const CarouselContainer = ({className, data = []}: CarouselContainerProps) => {
 }
 
 const Carousel = ({activeIndex, setActiveIndex, children}: CarouselProps) => {
-    const carouselRef: any = useRef(null);
-    const [carouselTranslate, setCarouselTranslate] = useState(null);
+    const carouselRef: any = React.useRef(null);
+    const [carouselTranslate, setCarouselTranslate] = React.useState(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const initialTranslateVal = carouselRef.current.offsetWidth / 206;
         const diffAmount = initialTranslateVal * 206;
         const translate: any = activeIndex === 0 ? initialTranslateVal : initialTranslateVal - (activeIndex * diffAmount)

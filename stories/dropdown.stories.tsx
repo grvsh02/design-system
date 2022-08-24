@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-import { addDecorator, Meta, Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import Dropdown from '../src/components/dropdown';
 
 
