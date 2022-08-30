@@ -38,6 +38,10 @@ export const Default = Template.bind({});
 
 Default.args = {
     totalCount: 200,
-    itemsPerPage: 10
-}
+    itemsPerPage: 10,
+    hideItemsPerPage: true,
+    page: 11,
+    showControls: true,
+    showEdges: true,
+};
 
