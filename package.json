@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "storybook-legacy": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=dd4e3128dba7",
+    "chromatic": "npx chromatic --project-token=<token>",
     "build-library": "rollup -c"
   },
   "eslintConfig": {
