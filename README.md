@@ -12,16 +12,13 @@ The recommended workflow is to run TSDX in one terminal:
 
 
 ```http
-  npm start # or yarn start
+  npm install # or yarn install
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `npm start` | `script` | **execute the defined file without typing its execution command.**.|
+| Parameter | Type     | Description                                                        |
+| :-------- | :------- |:-------------------------------------------------------------------|
+| `npm start` | `script` | **Install all the node_modules required to run the application.**. |
 
-
-This builds to `/dist` and runs the project in watch mode so any edits you
-save inside `src`causes a rebuild to `/dist`.
 
 Then run either storybook or the example playground:
 
