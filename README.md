@@ -92,3 +92,41 @@ Here the user will get two cards which are respectively :
                 💡 Free Shipping  -  The user will not have to pay the shipping price if they purchase items above ₹500(INDIAN RUPEES).
 
 🔳 Here also the width and the margin can be set using the className, for - example : `w - a m - b`. The 'a' and 'b' are the respective width and margin.
+
+
+📌 C - ICON(🛒)
+
+🔗 C.1 - Default : 
+
+In this the user can view the icon/logo of our company. And as we know :
+ ```
+ “The power of visual language — never forget it. 
+ The good, the bad and the ugly. 
+ It really does hold some weight in how it can sway and persuade whole groups of people.”
+ ```
+Our default icon represents a shopping cart(🛒) which is used by almost everyone when they go for purchasing something for
+their family ,dear ones or themselves.
+>🔻Note : Our icon can be changed using the icon option.
+
+| Name | type    | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `icon`      | `string` | **The icon can be changed using this option.**|
+| `size`      | `string` | **The application takes size according to the device.**|
+| `type`      | `string` | **It can be either be bold or outline.**|
+| `fill`      | `hex color` | **The color of the icon can be changed.**|
+
+# BANNERS
+
+📌 A - Carousel
+
+🔗 A.1 - Default : 
+
+ - The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
+
+ - In this the user will get indicators along with the controls - `Prev` and `Next`.
+                        
+ - 📝Important : The user can see all the latest collection,offers(disconts) on whole variety of different
+   things(cothes,footwear,electronic gadgets,etc.).
+
+ - The user can shop the products shown in the carousel by just clicking on the `Shop Now` button which gets 
+   highlighted whenever the user hovers the mouse over it.
