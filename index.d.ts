@@ -14,4 +14,4 @@ export {default as Pagination} from './src/components/pagination';
 export {default as ProductCard} from './src/components/productCard';
 export {default as QuantityInput} from './src/components/quantity';
 export {default as Avatar} from './src/components/avatar';
-// export {default as Modal} from './src/components/modal';
+ export {default as Modal} from './src/components/modal';
