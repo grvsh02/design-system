@@ -133,3 +133,22 @@ their family ,dear ones or themselves.
 
  - The user can shop the products shown in the carousel by just clicking on the `Shop Now` button which gets 
    highlighted whenever the user hovers the mouse over it.
+
+   
+# SELECTORS
+
+📌 A - Dropdown
+
+🔗 A.1 - Default : 
+
+In this the user can can select the items that they want to buy in the dropdown box.
+The following is  the description for the controls.
+| Name | Control |
+| ------ | ------ |
+| `showOnHover` | The items(options) in the dropdown box gets highlighted on hovering. |
+| `label` | Classifying name. |
+| `placeholder` | Describes the expected value of an input field. |
+| `className` | The size of the dropbox can be altered using this. |
+| `items` | Shows the items selected by the user. |
+
+>NOTE : The user can stop the hovering by clicking on the slide button of the `showOnHover` and making it False.
