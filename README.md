@@ -149,3 +149,166 @@ The following is  the description for the controls.
 | `items` | Shows the items selected by the user. |
 
 >NOTE : The user can stop the hovering by clicking on the slide button of the `showOnHover` and making it False.
+
+
+# PRODUCT
+
+📌 A - Icon Card
+
+🔗 A.1 - Default : 
+
+The user can see a sign (♥️) and (XL) at the top - center just below the navbar.
+
+⚙️ (♥️) : This can be used by the user to like the product which they want to buy at that moment or later on.
+
+⚙️ (XL) : The user can set the size of the cloth item, for example - XL = 95 cm = 36 Inches,XXL =44-46 Inches = 112-117 cm.
+
+📌 B - Product Card
+
+🔗 B.1 - Default :
+
+The user can see a product card which is a specific page with all the detailed information about your product.
+The user can see the product card in left hand side of the screen.
+It has many icon cards inside it which have some features respectively.
+For example :
+
+| icon  | Control |
+| ------ | ------ |
+| `🛒` | The user can shop by clicking on this icon. |
+| `⚫` | The user can bookmark it. |
+| `♥️` | The user can like it. |
+| `👁️` | The user can see the product, it's details and public reviews. |
+
+
+| Name  | Control |
+| ------ | ------ |
+| **name** | The name of the product is given in the product card. |
+| **price** | The price of the item is shown. |
+| **brand** | The brand or the company of the product is shown. |
+| **productProps** | The rating, strike price, color options and size options are given. |
+
+>NOTE : The rating is basically a parameter which shows how the customers have likes it and how good the product basically is.
+- For example - ⭐⭐⭐⭐ and above are considered as very good products as per the reviews given by the user.
+
+
+# USER INPUTS
+
+📌 A - LabelTextInput
+
+🔗 A.1 - Default : 
+
+Here the user has to input their  email id through which they have logged in to the website.
+
+💿 The email id should be of the form:
+
+```
+local-part@domain name
+
+```
+
+💿 The syntax of the local part - 
+
+```
+The local-part or username may be up to 64 characters long and contain:
+
+📩 uppercase and lowercase Latin letters (A-Z, a-z);
+📩 numeric values (from 0 to 9);
+📩 special characters, such as # ! % $ ‘ & + * – / = ? ^ _`. { | } ~
+
+```
+💿 @ sign :
+
+```
+The @ symbol connects the domain and the person who owns the email address.
+
+```
+
+💿 Domain name syntax :
+
+```
+A domain name consists of one or more parts separated by a dot, such as example.com. Each part must be no longer than 63 characters and can contain:
+
+📩 uppercase and lowercase Latin letters (A-Z, a-z);
+📩 numeric values (from 0 to 9), on condition that domains can’t be all numeric;
+📩 a hyphen (-), on condition that it is not placed at the beginning or end of the domain.
+
+```
+
+
+📌 C - IconTextInput
+
+🔗 C.1 - Default :
+
+- This is just a text input box with a icon/A component to render a leading / trailing icon in the TextInput. The user can put their email address in this box.
+
+- Props : 
+
+ ```
+⏳ icon (required)
+    Type: IconSource
+    Icon to show.
+
+⏳ onPress
+    Type: () => void
+    Function to execute on press.
+
+⏳ forceTextInputFocus
+    Type: boolean
+    Default value: true
+    Whether the TextInput will focus after onPress
+
+⏳ color
+    Type: ((isTextInputFocused: boolean) => string | undefined) | string
+    Color of the icon or a function receiving a boolean indicating whether the TextInput is focused and returning the color.
+
+⏳ style
+    Type: StyleProp<ViewStyle>
+
+⏳ theme
+   Type: Theme
+
+ ```
+
+| Name | Description | Default |
+| :-------- | :------- | :-------------------------------- |
+| placeholder | `string` | **"Email Address"**|
+| value | `string` | - |
+| onChange | `((value: any) => void)` | **() => {}**|
+| charLimit | `hex color` | - |
+| charLimit | `number` | - |
+| className | `string` | - |
+| required | `boolean` | - |
+| disabled | `boolean` | - |
+| type |`email,text,textarea,password,url,number`| - |
+| errorText | `string` | - |
+| PreTextIcon | `any` | **SmsTracking**|
+| PostTextIcon | `any` | **ArrowRight1**|
+| showCharLimit | `boolean` | - |
+
+
+# LAYOUTS
+
+📌 A - Page Navigator
+
+🔗 A.1 - Default :
+
+- The user can use the filter function which enables searching for particular pages and a limiting of the display to the pages that match certain criteria.
+
+Some of the features :
+
+| Name  | Control |
+| ------ | ------ |
+| `itemsPerPage` | The user can select the items per page. (`number`) |
+| `totalCount` | The user can select the total count of the items. (`number`) |
+
+⚠️ Note : There are total 50 pages.
+
+Navigation symbols (🧭): 
+
+| icon  | attribute |
+| ------ | ------ |
+| `<<` | The user can shift to extreme left and go to page number 1. |
+| `<` | The user can shift to the left page one by one. |
+| `>` | The user can shift to the right page one by one. |
+| `>>` | The user can shift to extreme right and go to page number 50. |
+
