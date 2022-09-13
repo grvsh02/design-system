@@ -3,6 +3,8 @@ import logo from '../../public/Homezy.png';
 import styled from "@emotion/styled";
 import Button from "./button";
 import IconCard from "./iconCard";
+import IconTextInput from "./IconTextInput";
+import searchNormal from "../icons/outline/SearchNormal";
 
 const NavbarContainer = styled('div')`
     height: 76px;
@@ -37,6 +39,7 @@ const NavBar = ({}) => {
 
     const [selected, setSelected] = React.useState(null);
 
+    // @ts-ignore
     return (
         <NavbarContainer>
             <Logo onClick={() => setSelected(null)}>
@@ -52,6 +55,11 @@ const NavBar = ({}) => {
                         )
                     })}
                 </TabContainer>
+            </div>
+            <div>
+                <IconTextInput placeholder="What's on your mind ?">
+
+                </IconTextInput>
             </div>
             <div className="flex justify-end items-center w-2/5 h-full">
                 <div>
