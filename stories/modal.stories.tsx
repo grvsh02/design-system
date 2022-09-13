@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import Modal from "../src/components/modal";
+import Button from "../src/components/button";
 
 const meta: Meta = {
     title: 'Basic elements/Modal',
@@ -19,22 +20,14 @@ const Template: Story = args => {
 
     return (
         <div>
-            <button onClick={() => setIsOpen(true)}>
-                open
-            </button>
-            <Modal isOpen={isOpen}>
-                <h1>Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                    Sed tempus consequat gravida.
-                    Quisque convallis iaculis aliquet.
-                    Pellentesque nec eros lorem.
-                    Nulla et sapien auctor, fermentum libero id, ultrices mi.
-                    Donec bibendum nibh quam, et volutpat ex aliquet eu. Duis id consectetur nunc.
-                    Vestibulum at aliquet elit, eget gravida nisi.
-                    Etiam sit amet lacus molestie, molestie ligula non, congue nunc. Morbi quam ante, porta non neque a, ultrices laoreet purus.
-                    Nunc ultricies augue est, id tincidunt justo porttitor vitae. Curabitur consequat urna non bibendum aliquam.
-
-                </h1>
+            <button onClick={() => setIsOpen(true)}>open </button>
+            <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                <div className="text-2xl font-semibold">Delete Item</div>
+                <div className="text-lg mt-5">Are you sure you want to delete this item?</div>
+                <div className="flex justify-end mt-5">
+                    <Button className="mr-5" onClick={() => setIsOpen(false)}>Cancel</Button>
+                    <Button type="selected">Delete</Button>
+                </div>
             </Modal>
         </div>
     );
