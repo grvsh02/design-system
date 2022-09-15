@@ -1,6 +1,6 @@
 {
   "name": "@grvsh02/homezy-design-system",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "storybook-legacy": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider  start-storybook -p 6006",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=dd4e3128dba7",
+    "chromatic": "npx chromatic --project-token=<token>",
     "build-library": "rollup -c"
   },
   "eslintConfig": {
@@ -83,6 +83,9 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@rollup/plugin-replace": "^4.0.0",
     "autoprefixer": "10.4.0",
     "postcss": "8.3.11",

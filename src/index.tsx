@@ -13,3 +13,5 @@ export {default as LabelTextInput} from './components/labelTextInput';
 export {default as Pagination} from './components/pagination';
 export {default as ProductCard} from './components/productCard';
 export {default as QuantityInput} from './components/quantity';
+export {default as Avatar} from './components/avatar';
+export {default as Modal} from './components/modal';
