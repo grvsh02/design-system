@@ -3,8 +3,9 @@ import logo from '../../public/Homezy.png';
 import styled from "@emotion/styled";
 import Button from "./button";
 import IconCard from "./iconCard";
-import IconTextInput from "./IconTextInput";
+import Icon from "./icon";
 import searchNormal from "../icons/outline/SearchNormal";
+import {SearchNormalBold} from "../icons/bold";
 
 const NavbarContainer = styled('div')`
     height: 76px;
@@ -16,7 +17,31 @@ const NavbarContainer = styled('div')`
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-`
+`;
+
+const TextFieldContainer = styled.div<{border: string}>`
+    height: 100%;
+    width: 100%;
+    border: 1px solid ${props  => props.border};
+    display: flex;
+    font-family: Pangram, sans-serif;
+`;
+
+const InputContainer = styled.input`
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+    color: #828282;
+    font-size: 10px;
+    ::placeholder {
+        color: #828282;
+    }
+    :hover {
+        border: none;
+    }
+    :focus {
+        outline: none;
+    }
+`;
 
 const TabContainer = styled.div`
     display: flex;
@@ -57,9 +82,10 @@ const NavBar = ({}) => {
                 </TabContainer>
             </div>
             <div>
-                <IconTextInput placeholder="What's on your mind ?">
-
-                </IconTextInput>
+                <TextFieldContainer border={'#828282'}>
+                    <Icon icon="SearchNormal"/>
+                    <InputContainer placeholder="Search" />
+                </TextFieldContainer>
             </div>
             <div className="flex justify-end items-center w-2/5 h-full">
                 <div>
