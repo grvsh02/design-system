@@ -39,4 +39,10 @@ const Template: Story = args => {
 
 export const Default = Template.bind({});
 
-Default.args = {}
+Default.args = {
+    title: 'Delete Candidate',
+    description: 'Are you sure you want to delete this Candidate?',
+    isOpen: false,
+    onClose: () => { },
+    onConfirm: () => { },
+};
