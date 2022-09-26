@@ -22,7 +22,7 @@ const NavbarContainer = styled('div')`
 const TextFieldContainer = styled.div<{border: string}>`
     height: 100%;
     width: 100%;
-    border: 1px solid;
+    border: 2px solid ${props  => props.border};
     border-radius: 5px;
     display: flex;
     font-family: Pangram, sans-serif;
@@ -64,6 +64,7 @@ const items = ["Men", "Women", "Kids", "Beauty"]
 const NavBar = ({}) => {
 
     const [selected, setSelected] = React.useState(null);
+    const [stroke, setStroke] = React.useState("#828282");
 
     return (
         <NavbarContainer>
@@ -82,7 +83,16 @@ const NavBar = ({}) => {
                 </TabContainer>
             </div>
             <div className='w-2/3'>
-                <TextFieldContainer  border={'#828282'}>
+                <TextFieldContainer
+                    className='w-full'
+                    onFocus={() => {
+                        setStroke("#F4694C")
+                    }}
+                    onBlur={() => {
+                        setStroke("#828282")
+                    }}
+                    border={stroke}
+                >
                  <span className="pt-2 pl-3">
                         <Icon
                             fill="#F4694C"
