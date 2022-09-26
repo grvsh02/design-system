@@ -65,7 +65,6 @@ const NavBar = ({}) => {
 
     const [selected, setSelected] = React.useState(null);
 
-    // @ts-ignore
     return (
         <NavbarContainer>
             <Logo onClick={() => setSelected(null)}>
