@@ -5,11 +5,11 @@ import Button from "./button";
 import IconCard from "./iconCard";
 import Icon from "./icon";
 import searchNormal from "../icons/outline/SearchNormal";
-import {SearchNormalBold} from "../icons/bold";
+
 
 const NavbarContainer = styled('div')`
     height: 76px;
-    width: 100%;
+    width: 100%;/
     background: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -22,7 +22,8 @@ const NavbarContainer = styled('div')`
 const TextFieldContainer = styled.div<{border: string}>`
     height: 100%;
     width: 100%;
-    border: 1px solid ${props  => props.border};
+    border: 1px solid;
+    border-radius: 5px;
     display: flex;
     font-family: Pangram, sans-serif;
 `;
@@ -81,9 +82,16 @@ const NavBar = ({}) => {
                     })}
                 </TabContainer>
             </div>
-            <div>
-                <TextFieldContainer border={'#828282'}>
-                    <Icon icon="SearchNormal"/>
+            <div className='w-2/3'>
+                <TextFieldContainer  border={'#828282'}>
+                 <span className="pt-2 pl-3">
+                        <Icon
+                            fill="#F4694C"
+                            icon="SearchNormal"
+                            size="xs"
+                            stroke="#F4694C"
+                            type="Outline"/>
+                    </span>
                     <InputContainer placeholder="Search" />
                 </TextFieldContainer>
             </div>
