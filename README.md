@@ -1,7 +1,7 @@
 
 # HOMEZY DESIGN SYSTEM
 
-# Commnands
+# Commands
 
 The recommended workflow is to run TSDX in one terminal:
 
@@ -35,6 +35,7 @@ This loads the story from `./stories`.
 
 - [@yakatyansh](https://github.com/yakatyansh)
 - [@grvsh02](https://github.com/grvsh02)
+- [@saumy4854](https://github.com/saumy4854)
 
 
 # Components
