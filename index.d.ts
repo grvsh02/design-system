@@ -5,7 +5,7 @@ export {default as Tabs} from './src/components/tabs';
 export {default as IconCard} from './src/components/iconCard';
 export {default as NavBar} from './src/components/navBar';
 export {default as Banner} from './src/components/Banner';
-export {default as Carousel} from './src/components/carousel';
+export {default as Carousel} from './src/components/Carousel/carousel';
 export {default as CheckoutCard} from './src/components/checkoutCard';
 export {default as Dropdown} from './src/components/dropdown';
 export {default as IconTextInput} from './src/components/IconTextInput';

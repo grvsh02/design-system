@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import Home from '../src/components/carousel';
+import Home from '../src/components/Carousel/carousel';
 
 const meta: Meta = {
     title: 'Banners/ Carousel',

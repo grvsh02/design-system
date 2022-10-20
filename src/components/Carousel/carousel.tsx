@@ -1,6 +1,6 @@
 import React from 'react';
 import './carousel.css';
-import Button from "./button";
+import Button from "../button";
 
 type CarouselContainerProps = {
     className?: string;
