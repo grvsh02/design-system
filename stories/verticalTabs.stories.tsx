@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import VerticalTab from '../src/components/verticalTab';
 
 const meta: Meta = {
-    title: 'Basic Elements/Tabs',
+    title: 'Basic Elements/vertical Tabs',
     component: VerticalTab,
 }
 

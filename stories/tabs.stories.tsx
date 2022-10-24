@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story, addDecorator } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import Tabs from '../src/components/tabs';
 
 const meta: Meta = {
