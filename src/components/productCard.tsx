@@ -70,7 +70,6 @@ type imageProp = {
 const ProductImage = styled('div')<imageProp>`
   width: 227px;
   height: 218px;
-  border: 2px solid blue;
   z-index: 2;
   img {
     width: 227px;

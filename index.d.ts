@@ -14,3 +14,4 @@ export {default as Pagination} from './src/components/pagination';
 export {default as ProductCard} from './src/components/productCard';
 export {default as QuantityInput} from './src/components/quantity';
 export {default as Search} from './src/components/searchBar';
+export {default as VerticalTabs} from './src/components/verticalTab';
